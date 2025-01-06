@@ -26,7 +26,7 @@ const OptionsButton = ({
 
   return (
     <div className="relative">
-      <div className="flex h-20 w-full bg-[#ebedee93]">
+      <div className="flex h-20 w- pt-3 bg-[#ebedee93]">
         <div className="flex items-center ml-40 gap-5">
           <button
             onClick={toggleIsOpen}

@@ -1,10 +1,10 @@
 
-const Cards = ({ cards, country, fetchData }) => {
+const Cards = ({ pagedCard }) => {
 
   return (
     <div className="bg-[#ebedee93]">
     <div className="flex flex-wrap p-4 justify-center gap-6 text-nowrap overflow-hidden">
-        {cards?.map((card) => {
+        {pagedCard?.map((card) => {
           return ( 
             <div key={card.idMeal}>
                {/* <Link to={`/card/${card.idMeal}`}> */}
