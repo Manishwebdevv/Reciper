@@ -44,6 +44,7 @@ const OptionsButton = ({
             Non veg
           </button>
         </div>
+        
         {/* Dropdown Menu */}
         {isOpen ? (
           <div className="element absolute h-48 left-40 top-16 mt-1 w-42 bg-white rounded-lg shadow-lg p-4 overflow-scroll">

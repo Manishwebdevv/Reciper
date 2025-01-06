@@ -9,7 +9,7 @@ function App() {
  
   return(
     <>
-    <NavBar/>
+    <NavBar country={country} setCountry={setCountry} fetchData={fetchData} list={list}/>
     <OptionsButton country={country} list={list} setCountry={setCountry} fetchData={fetchData} fetchList={fetchList}/>
     <Cards cards={cards} country={country} fetchData={fetchData} />
     </>
