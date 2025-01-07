@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const usePagination = ({ cards }) => {
    const [ currentPage, setCurrentPage ] = useState(1)
@@ -26,7 +26,7 @@ const usePagination = ({ cards }) => {
             setCurrentPage(currentPage - 1)
       }
    }
-  return {pagedCard, currentPage, backWard, moveForward, totalPages, handlePageChange }
+  return {pagedCard, currentPage, backWard, moveForward, totalPages, handlePageChange, setCurrentPage }
 }
 
 export default usePagination

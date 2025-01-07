@@ -1,18 +1,16 @@
 
-const Cards = ({ pagedCard }) => {
+const Cards = ({ pagedCard, onClick }) => {
 
   return (
     <div className="bg-[#ebedee93]">
-    <div className="flex flex-wrap p-4 justify-center gap-6 text-nowrap overflow-hidden">
+    <div className="flex flex-wrap p-4 justify-center gap-3 text-nowrap overflow-hidden">
         {pagedCard?.map((card) => {
           return ( 
-            <div key={card.idMeal}>
-               {/* <Link to={`/card/${card.idMeal}`}> */}
-                <div className="h-56 w-72 p-3 shadow-sm rounded-md">
-                   <img src={card.strMealThumb} alt={card.strMeal} className="h-44 w-72 rounded-md" />
+            <div key={card.idMeal} onClick={() => onClick(card.idMeal)}>
+                <div className="h-64 w-80 p-3 shadow-sm rounded-md mb-5">
+                   <img src={card.strMealThumb} alt={card.strMeal} className="h-52 w-80 rounded-2xl" />
                    <h1 className="font-bold p-1 text-gray-700 text-xl overflow-hidden">{card.strMeal}</h1>
                 </div>
-                {/* </Link> */}
             </div>
           )
         })}

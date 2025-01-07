@@ -2,11 +2,12 @@ import axios from "axios"
 import { useState } from "react"
 import { RECIPE } from "../utils/constants"
 
-const UseFetch = () => {
+const useFetch = () => {
     const [country, setCountry] = useState('indian')
     const [cards, setCards] = useState([])
     const [list, setList] = useState([])
-     
+    const [error, setError] = useState("")
+
     const listUrl = process.env.REACT_APP_LIST
 
     async function fetchData() {
@@ -16,7 +17,7 @@ const UseFetch = () => {
             setCards(result)
     
           } catch (error) {
-              
+            setError("Oops! Something went wrong. Please try again later.")
           }
     }
 
@@ -26,11 +27,11 @@ const UseFetch = () => {
             const result = countryList.data?.meals
             setList(result)
         } catch (error) {
-           
+            setError("Oops! Something went wrong. Please try again later.")
         } 
     }
     return { country, setCountry, cards, setCards, list, setList, fetchData, fetchList }
   }
 
   
-  export default UseFetch
+  export default useFetch

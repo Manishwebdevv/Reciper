@@ -18,7 +18,7 @@ const [ searchCountry, setSearchCountry ] = useState('')
     return (
             <div className='flex items-center mr-[70px] bg-slate-200 p-2 rounded-md'>
             <input type='text' value={searchCountry} onChange={(e) => setSearchCountry(e.target.value)} placeholder='Search here' 
-            className='bg-inherit p-1 mr-2 font-sans text-black rounded-md focusb:order-4 focus:border-black'/>
+            className='bg-inherit px-3 p-1 mr-2 font-sans text-black rounded-md focusb:order-4 focus:border-black'/>
             <button onClick={handleSearch}>
             <SearchIcons width-20 h-24/>
             </button>
