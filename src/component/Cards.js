@@ -3,7 +3,7 @@ const Cards = ({ pagedCard, onClick }) => {
 
   return (
     <div className="bg-[#ebedee93]">
-    <div className="flex flex-wrap p-4 justify-center gap-3 text-nowrap overflow-hidden">
+    <div className="flex flex-wrap min-h-screen p-4 justify-center gap-3 text-nowrap overflow-hidden">
         {pagedCard?.map((card) => {
           return ( 
             <div key={card.idMeal} onClick={() => onClick(card.idMeal)}>

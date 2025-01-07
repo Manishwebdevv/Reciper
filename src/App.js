@@ -10,6 +10,7 @@ import NavBar from './component/NavBar';
 import OptionsButton from './component/OptionsButton';
 import Pagination from './component/Pagination';
 import Dialog from './component/Dialog';
+import Footer from './component/Footer';
 
 function App() {
   const { cards, setCards, country, fetchData, list, fetchList, setCountry } = useFetch()
@@ -23,6 +24,7 @@ function App() {
     <Pagination moveForward={moveForward} backWard={backWard} totalPages={totalPages} handlePageChange={handlePageChange} currentPage={currentPage} country={country} setCurrentPage={setCurrentPage}/>
     <Cards pagedCard={pagedCard} onClick={dialogOpen}/>
     <Dialog dialogOpen={dialogOpen} dialogClose={dialogClose} isOpen={isOpen} data={data}/>
+    <Footer />
     </>
   )
 }
