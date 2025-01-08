@@ -7,16 +7,16 @@ const Pagination = ({
   handlePageChange,
   currentPage,
   country,
-  setCurrentPage
+  setCurrentPage,
 }) => {
- 
-useEffect(() => {
-  setCurrentPage(1)
-}, [country])
+  
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [country]);
 
   return (
-    <div className="bg-[#ebedee93] h-30 w-full py-6">
-      <div className="flex justify-end pr-40 gap-2">
+    <div className="sm:h-30 sm:w-full bg-[#ebedee93]">
+      <div className="flex flex-wrap justify-end mx-12 sm:pr-40 gap-2 py-6">
         <button
           onClick={backWard}
           className="h-8 font-bold w-8 text-xl rounded-lg bg-orange-500 border-2 border-orange-500 text-white transform rotate-180"

@@ -1,18 +1,18 @@
 import axios from "axios"
 import { useState } from "react"
-import { RECIPE } from "../utils/constants"
 
 const useFetch = () => {
     const [country, setCountry] = useState('indian')
     const [cards, setCards] = useState([])
     const [list, setList] = useState([])
     const [error, setError] = useState("")
-
+    
+    const dishes = process.env.REACT_APP_RECIPE
     const listUrl = process.env.REACT_APP_LIST
 
     async function fetchData() {
         try {
-            const response = await axios.get(RECIPE + country)
+            const response = await axios.get(dishes + country)
             const result = response.data?.meals
             setCards(result)
     
